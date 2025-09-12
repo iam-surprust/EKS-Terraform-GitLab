@@ -1,3 +1,25 @@
+## 📂 Repository Structure
+
+```plaintext
+EKS-Terraform-GitLab/
+│── modules/                # (Optional) If you later modularize the code
+│
+├── provider.tf             # Terraform block and AWS provider configuration
+├── eks-backend-terra.tf    # Remote backend (S3 + DynamoDB) configuration
+├── vpc.tf                  # VPC creation
+├── subnets.tf              # Public & private subnets
+├── internetgw.tf           # Internet Gateway
+├── route.tf                # Route tables and associations
+├── sg.tf                   # Security groups for cluster and nodes
+├── iam_role.tf             # IAM roles and policies (cluster + nodes)
+├── eks_cluster.tf          # EKS control plane definition
+├── eks_node_group.tf       # EKS managed node group(s)
+├── variables.tf            # Input variables (if missing, define inline or via tfvars)
+├── outputs.tf              # Output values (cluster details, node group info, etc.)
+├── README.md               # Project documentation
+
+
+
 # EKS-Terraform-GitLab
 This is the final version of EKS deployment using Terraform
 1) What’s in the repo (by filename)
